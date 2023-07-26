@@ -35,7 +35,7 @@ IEnumerable<string> FindFiles(string folderName)
         if (extension == ".json")
         {
             salesFiles.Add(file);
-        }        
+        }
     }
 
     return salesFiles;
@@ -57,7 +57,7 @@ double CalculateSalesTotal(IEnumerable<string> salesFiles)
         // Add the amount found in the Total field to the salesTotal variable
         salesTotal += data?.Total ?? 0;
     }
-    
+
     return salesTotal;
 }
 
@@ -67,4 +67,4 @@ record SalesData(double Total);
 //Если необходимо работать с файлами других типов, а не ".json", соответствующие пакеты можно найти на сайте nuget.org.
 //Например, можно использовать пакет CsvHelper для CSV-файлов.
 
-// запускать приложении в терминале: dotnet run
+// запускать приложение в терминале: dotnet run
